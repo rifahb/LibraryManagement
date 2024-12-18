@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.pyd
+*.pyo
+*.pdb
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+egg-info/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment
+venv/
+.env/
+.venv/
+env/
+ENV/
+venv.bak/
+.env.bak/
+.venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VS Code specific (you can remove this if you're not using VS Code)
+*.code-workspace
