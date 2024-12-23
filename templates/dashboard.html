@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome, {{ session['username'] }}</h2>
+<a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
+
+<h3>Add a New Book</h3>
+<form method="POST" action="{{ url_for('add_book') }}">
+    <input type="text" name="title" placeholder="Book Title" required>
+    <input type="text" name="author" placeholder="Author" required>
+    <button type="submit" class="btn btn-primary">Add Book</button>
+</form>
+
+<h3>Manage Library</h3>
+<a href="{{ url_for('view_books') }}" class="btn btn-secondary">View All Books</a>
+
+<h3>Books in the Library</h3>
+<ul>
+    {% for book in books %}
+        <li>
+            <strong>{{ book[1] }}</strong> by {{ book[2] }}
+            <a href="{{ url_for('delete_book', book_id=book[0]) }}" class="btn btn-danger">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
