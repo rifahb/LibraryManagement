@@ -1,0 +1,42 @@
+Installation
+Prerequisites:
+Python 3.10 or higher
+A code editor (e.g., VS Code)
+Steps:
+1. Clone the repository:
+git clone https://github.com/rifahb/LibraryManagement.git
+2. Navigate to the project directory:
+cd LibraryManagement
+3. Set up the virtual environment:
+python -m venv venv
+4. Activate the virtual environment:
+For Windows:
+venv\Scripts\activate
+For macOS/Linux:
+source venv/bin/activate
+5. Install the required dependencies:
+pip install -r requirements.txt
+6. Run the application:
+python app.py
+7. Access the application:
+Open your browser and navigate to:
+
+http://127.0.0.1:5000
+File Structure
+LibraryManagement/
+├── static/             # Static assets (CSS, JavaScript, images)
+├── templates/          # HTML templates for the UI
+├── app.py              # Main Flask application
+├── library.db          # SQLite database file
+├── .gitignore          # Git ignore file
+├── requirements.txt    # Python dependencies
+└── README.md           # Project documentation
+Usage
+User Access:
+Users can:
+Add new books to the library.
+View all books and search using filters like title, author, or genre.
+Update or delete books as needed.
+Features:
+Add, delete, view, and update books in the library.
+View all available books with search functionality for easy navigation.
