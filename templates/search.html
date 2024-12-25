@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Search for Books</h2>
+
+<form method="GET" action="{{ url_for('search') }}">
+    <input type="text" name="query" placeholder="Search books by title, author, or genre" required>
+    <button type="submit">Search</button>
+</form>
+
+{% if books %}
+    <h3>Search Results</h3>
+    <ul>
+        {% for book in books %}
+            <li>{{ book[1] }} - {{ book[2] }}</li> <!-- Assuming book[1] is title, book[2] is author -->
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No books found</p>
+{% endif %}
+{% endblock %}

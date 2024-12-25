@@ -9,7 +9,11 @@
     <input type="text" name="author" placeholder="Author" required>
     <button type="submit" class="btn btn-primary">Add Book</button>
 </form>
-
+<h3>Search for a Book</h3>
+<form method="GET" action="{{ url_for('search') }}">
+    <input type="text" name="query" placeholder="Search by title, author, or genre" required>
+    <button type="submit" class="btn btn-secondary">Search</button>
+</form>
 <h3>Manage Library</h3>
 <a href="{{ url_for('view_books') }}" class="btn btn-secondary">View All Books</a>
 

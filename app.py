@@ -124,6 +124,24 @@ def view_books():
         books = cursor.fetchall()
 
     return render_template("view_books.html", books=books)
+# Function to search books
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    query = request.args.get('query', '') if request.method == 'GET' else request.form.get('query', '')
+    books = []
+    
+    if query:
+        conn = sqlite3.connect('library.db')
+        cursor = conn.cursor()
+        books = cursor.execute(
+            "SELECT * FROM books WHERE title LIKE ? OR author LIKE ?",
+            ('%' + query + '%', '%' + query + '%')
+        ).fetchall()
+        conn.close()
+    print(f"Query: {query}")
+    print(f"Books: {books}")
+
+    return render_template('search.html', books=books,query=query)
 
 if __name__ == "__main__":
     init_db()
