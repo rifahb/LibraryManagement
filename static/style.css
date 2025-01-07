@@ -13,6 +13,17 @@ body {
     max-width: 800px; /* Limit the maximum width for readability */
     padding: 20px; /* Add spacing inside the container */
 }
+/* Links Styling */
+a {
+    color: #007bff; /* Default blue color for links */
+    text-decoration: none; /* Remove underline for links */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
 
 /* Headings */
 h2, h3 {
@@ -53,6 +64,10 @@ h2, h3 {
 
 .btn:hover {
     opacity: 0.9; /* Slight transparency effect on hover */
+}
+/* Smooth transition for button hover effects */
+.btn {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 /* Flash Messages */
