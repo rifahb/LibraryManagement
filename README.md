@@ -10,10 +10,8 @@ This project is a efficient **Library Management System** designed to simplify t
 - Easily add new books to the library database.  
 - Inputs include key details such as:  
   - Title  
-  - Author  
-  - ISBN  
-  - Genre  
-  - Publication Year  
+  - Author   
+  - Genre   
 
 ### 2. **Delete Books**  
 - Remove books from the library system using a unique identifier (e.g., Book ID or ISBN).  
